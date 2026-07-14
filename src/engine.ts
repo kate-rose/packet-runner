@@ -24,6 +24,7 @@ export type Step =
   | { t: "do"; run: (s: GameState) => void }
   | { t: "reveal"; reveals: Reveal[] }
   | { t: "widget"; name: string; title: string; caption: string }
+  | { t: "hideWidget" }
   | { t: "ending"; id: EndingId };
 
 export interface Choice {
@@ -52,6 +53,9 @@ export const doo = (run: (s: GameState) => void): Step => ({ t: "do", run });
 export const reveal = (...reveals: Reveal[]): Step => ({ t: "reveal", reveals });
 // A framed animated widget (SVG in public/widgets/) shown in tile-window chrome.
 export const widget = (name: string, title: string, caption = ""): Step => ({ t: "widget", name, title, caption });
+// Dismiss a persistent widget (widgets now stay up across dialogue until this,
+// a menu, or a scene change).
+export const hideWidget = (): Step => ({ t: "hideWidget" });
 export const ending = (id: EndingId): Step => ({ t: "ending", id });
 
 // ---------------------------------------------------------------------------
@@ -271,6 +275,9 @@ export class Engine {
           this.renderWidget(step.name, step.title, step.caption);
           this.persist();
           return;
+        case "hideWidget":
+          this.clearWidget();
+          break;
         case "say":
           this.renderSay(step.who, step.text);
           this.persist();
@@ -405,12 +412,10 @@ export class Engine {
   }
 
   private renderSay(who: string, text: string): void {
-    this.clearWidget();
     this.setText(who, text);
   }
 
   private renderLog(text: string): void {
-    this.clearWidget();
     this.elMenu.classList.add("hidden");
     this.elTextbox.classList.remove("hidden");
     this.elTextbox.classList.remove("narration");
