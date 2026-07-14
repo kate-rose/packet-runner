@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 740" preserveAspectRatio="xMidYMid meet" font-family="monospace">
+  <defs>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd27f" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffd27f" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="photoclip"><rect x="50" y="92" width="640" height="520"/></clipPath>
+  </defs>
+
+  <!-- ===== LEFT: the sunset photo ===== -->
+  <g clip-path="url(#photoclip)">
+    <rect x="50" y="92" width="640" height="300" fill="#0a0a0a"/>
+    <!-- stars -->
+    <g fill="#fff" opacity="0.7">
+      <circle cx="140" cy="150" r="2"/><circle cx="300" cy="130" r="2"/><circle cx="520" cy="160" r="2"/>
+      <circle cx="620" cy="120" r="2"/><circle cx="220" cy="200" r="2"/><circle cx="430" cy="190" r="2"/>
+    </g>
+    <!-- sun -->
+    <circle cx="370" cy="380" r="150" fill="url(#sun)"/>
+    <circle cx="370" cy="360" r="70" fill="#fff"/>
+    <!-- sea -->
+    <rect x="50" y="392" width="640" height="220" fill="#161616"/>
+    <g stroke="#fff" stroke-width="3" opacity="0.8">
+      <line x1="250" y1="430" x2="490" y2="430"/><line x1="200" y1="470" x2="540" y2="470"/>
+      <line x1="260" y1="510" x2="480" y2="510"/><line x1="180" y1="555" x2="560" y2="555"/>
+    </g>
+    <!-- pixel grid overlay -->
+    <g stroke="#3a3a3a" stroke-width="1">
+      <line x1="114" y1="92" x2="114" y2="612"/><line x1="178" y1="92" x2="178" y2="612"/>
+      <line x1="242" y1="92" x2="242" y2="612"/><line x1="306" y1="92" x2="306" y2="612"/>
+      <line x1="370" y1="92" x2="370" y2="612"/><line x1="434" y1="92" x2="434" y2="612"/>
+      <line x1="498" y1="92" x2="498" y2="612"/><line x1="562" y1="92" x2="562" y2="612"/>
+      <line x1="626" y1="92" x2="626" y2="612"/>
+      <line x1="50" y1="156" x2="690" y2="156"/><line x1="50" y1="220" x2="690" y2="220"/>
+      <line x1="50" y1="284" x2="690" y2="284"/><line x1="50" y1="348" x2="690" y2="348"/>
+      <line x1="50" y1="412" x2="690" y2="412"/><line x1="50" y1="476" x2="690" y2="476"/>
+      <line x1="50" y1="540" x2="690" y2="540"/>
+    </g>
+    <!-- the loupe, sweeping the horizon -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite"
+        keyTimes="0;0.5;1" values="-250 0;250 0;-250 0" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+      <circle cx="370" cy="360" r="78" fill="#ffd27f" opacity="0.06"/>
+      <circle cx="370" cy="360" r="78" fill="none" stroke="#ffd27f" stroke-width="6"/>
+      <line x1="425" y1="415" x2="470" y2="460" stroke="#ffd27f" stroke-width="10" stroke-linecap="round"/>
+      <!-- magnified bits under the lens -->
+      <g font-size="22" text-anchor="middle">
+        <text x="345" y="345" fill="#cfcfcf">101<tspan fill="#ffd27f">0</tspan></text>
+        <text x="395" y="345" fill="#cfcfcf">110<tspan fill="#ffd27f">1</tspan></text>
+        <text x="345" y="385" fill="#cfcfcf">011<tspan fill="#ffd27f">1</tspan></text>
+        <text x="395" y="385" fill="#cfcfcf">100<tspan fill="#ffd27f">0</tspan></text>
+      </g>
+    </g>
+  </g>
+  <rect x="50" y="92" width="640" height="520" fill="none" stroke="#f4f4f4" stroke-width="3"/>
+  <rect x="50" y="60" width="260" height="32" fill="#0b0b0b"/>
+  <text x="62" y="84" font-size="20" fill="#c79a52">SUNSET.PHOTO</text>
+
+  <!-- arrow -->
+  <text x="725" y="360" font-size="40" fill="#ffd27f" text-anchor="middle">&#8594;</text>
+
+  <!-- ===== RIGHT: the LSB decode ===== -->
+  <rect x="760" y="92" width="790" height="520" fill="#070707" stroke="#f4f4f4" stroke-width="3"/>
+  <rect x="760" y="60" width="380" height="32" fill="#0b0b0b"/>
+  <text x="772" y="84" font-size="20" fill="#c79a52">LEAST SIGNIFICANT BIT</text>
+
+  <!-- scanning highlight -->
+  <rect x="772" y="150" width="600" height="46" fill="#ffd27f" opacity="0.12">
+    <animate attributeName="y" dur="7s" repeatCount="indefinite"
+      keyTimes="0;0.06;0.62;1" values="150;150;486;486"/>
+  </rect>
+
+  <!-- 7 binary rows; last bit amber = the hidden payload -->
+  <g font-size="34" letter-spacing="6">
+    <text x="800" y="186" fill="#bdbdbd">0 1 1 0 1 0 0 <tspan fill="#ffd27f">1</tspan></text>
+    <text x="800" y="242" fill="#bdbdbd">1 1 0 0 1 0 1 <tspan fill="#ffd27f">0</tspan></text>
+    <text x="800" y="298" fill="#bdbdbd">0 0 0 1 0 1 0 <tspan fill="#ffd27f">0</tspan></text>
+    <text x="800" y="354" fill="#bdbdbd">1 0 1 1 0 0 0 <tspan fill="#ffd27f">0</tspan></text>
+    <text x="800" y="410" fill="#bdbdbd">0 1 0 0 0 0 1 <tspan fill="#ffd27f">1</tspan></text>
+    <text x="800" y="466" fill="#bdbdbd">1 1 1 0 0 1 0 <tspan fill="#ffd27f">0</tspan></text>
+  </g>
+
+  <!-- result panel -->
+  <rect x="772" y="520" width="766" height="74" fill="#0b0b0b" stroke="#3a2f1a" stroke-width="2"/>
+  <text x="1155" y="568" font-size="36" fill="#c79a52" text-anchor="middle">
+    DECODING<tspan>...</tspan>
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" keyTimes="0;0.5;0.58;1" values="1;1;0;0"/>
+  </text>
+  <g>
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" keyTimes="0;0.62;0.7;1" values="0;0;1;1"/>
+    <rect x="772" y="520" width="766" height="74" fill="none" stroke="#ffd27f" stroke-width="2"/>
+    <text x="1155" y="570" font-size="44" fill="#ffd27f" text-anchor="middle" letter-spacing="3">10.00.100.23</text>
+  </g>
+
+  <!-- progress bar -->
+  <rect x="760" y="612" width="790" height="8" fill="#1a1a1a"/>
+  <rect x="760" y="612" width="10" height="8" fill="#ffd27f">
+    <animate attributeName="width" dur="7s" repeatCount="indefinite" keyTimes="0;0.7;1" values="0;790;790"/>
+  </rect>
+</svg>

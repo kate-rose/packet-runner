@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <pattern id="ht" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+    <rect width="14" height="14" fill="#dcdcdc"/><circle cx="7" cy="7" r="3.1" fill="#111"/>
+  </pattern>
+  <pattern id="htd" width="12" height="12" patternUnits="userSpaceOnUse">
+    <rect width="12" height="12" fill="#9a9a9a"/><circle cx="6" cy="6" r="4.2" fill="#0c0c0c"/>
+  </pattern>
+  <pattern id="htl" width="16" height="16" patternUnits="userSpaceOnUse">
+    <rect width="16" height="16" fill="#f2f2f2"/><circle cx="8" cy="8" r="2.0" fill="#222"/>
+  </pattern>
+  <pattern id="bricks" width="80" height="44" patternUnits="userSpaceOnUse">
+    <rect width="80" height="44" fill="#1a1a1a"/>
+    <rect width="80" height="44" fill="none" stroke="#555" stroke-width="2"/>
+    <line x1="40" y1="0" x2="40" y2="22" stroke="#555" stroke-width="2"/>
+    <line x1="0" y1="22" x2="80" y2="22" stroke="#555" stroke-width="2"/>
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#555" stroke-width="2"/>
+  </pattern>
+  <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+    <stop offset="55%" stop-color="#cfcfcf" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="#0b0b0b"/><polygon points="0,0 620,380 620,760 0,1000" fill="url(#bricks)"/><polygon points="1600,0 980,380 980,760 1600,1000" fill="url(#bricks)"/><polygon points="620,380 980,380 980,760 620,760" fill="#020202"/><polygon points="0,1000 620,760 980,760 1600,1000" fill="url(#htd)"/><rect x="120" y="450" width="90" height="230" fill="#111" stroke="#f4f4f4" stroke-width="5"/><rect x="132" y="462" width="66" height="120" fill="url(#glow)"/><line x1="1300" y1="120" x2="1480" y2="120" stroke="#f4f4f4" stroke-width="4" opacity="0.8"/><line x1="1300" y1="210" x2="1480" y2="210" stroke="#f4f4f4" stroke-width="4" opacity="0.8"/><line x1="1300" y1="300" x2="1480" y2="300" stroke="#f4f4f4" stroke-width="4" opacity="0.8"/><line x1="1300" y1="390" x2="1480" y2="390" stroke="#f4f4f4" stroke-width="4" opacity="0.8"/><line x1="1300" y1="480" x2="1480" y2="480" stroke="#f4f4f4" stroke-width="4" opacity="0.8"/><circle cx="980" cy="240" r="14" fill="#fff"/><polygon points="980,240 940,540 1020,540" fill="url(#glow)"/></svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <pattern id="ht" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+    <rect width="14" height="14" fill="#dcdcdc"/><circle cx="7" cy="7" r="3.1" fill="#111"/>
+  </pattern>
+  <pattern id="htd" width="12" height="12" patternUnits="userSpaceOnUse">
+    <rect width="12" height="12" fill="#9a9a9a"/><circle cx="6" cy="6" r="4.2" fill="#0c0c0c"/>
+  </pattern>
+  <pattern id="htl" width="16" height="16" patternUnits="userSpaceOnUse">
+    <rect width="16" height="16" fill="#f2f2f2"/><circle cx="8" cy="8" r="2.0" fill="#222"/>
+  </pattern>
+  <pattern id="bricks" width="80" height="44" patternUnits="userSpaceOnUse">
+    <rect width="80" height="44" fill="#1a1a1a"/>
+    <rect width="80" height="44" fill="none" stroke="#555" stroke-width="2"/>
+    <line x1="40" y1="0" x2="40" y2="22" stroke="#555" stroke-width="2"/>
+    <line x1="0" y1="22" x2="80" y2="22" stroke="#555" stroke-width="2"/>
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#555" stroke-width="2"/>
+  </pattern>
+  <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+    <stop offset="55%" stop-color="#cfcfcf" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="#fff"/><rect width="1600" height="1000" fill="url(#htl)"/><polygon points="0,1000 680,430 920,430 1600,1000" fill="url(#ht)"/><rect x="0" y="-70" width="360" height="760" fill="url(#htd)" stroke="#111" stroke-width="4"/><rect x="1240" y="-70" width="360" height="760" fill="url(#htd)" stroke="#111" stroke-width="4"/><rect x="360" y="219" width="223" height="471" fill="url(#htd)" stroke="#111" stroke-width="4"/><rect x="1017" y="219" width="223" height="471" fill="url(#htd)" stroke="#111" stroke-width="4"/><rect x="560" y="386" width="144" height="304" fill="url(#htd)" stroke="#111" stroke-width="4"/><rect x="896" y="386" width="144" height="304" fill="url(#htd)" stroke="#111" stroke-width="4"/><polygon points="640,1000 660,580 700,580 690,1000" fill="#fff" opacity="0.8"/><polygon points="686,1000 706,580 746,580 736,1000" fill="#fff" opacity="0.8"/><polygon points="732,1000 752,580 792,580 782,1000" fill="#fff" opacity="0.8"/><polygon points="778,1000 798,580 838,580 828,1000" fill="#fff" opacity="0.8"/><polygon points="824,1000 844,580 884,580 874,1000" fill="#fff" opacity="0.8"/><polygon points="870,1000 890,580 930,580 920,1000" fill="#fff" opacity="0.8"/><polygon points="916,1000 936,580 976,580 966,1000" fill="#fff" opacity="0.8"/><circle cx="420" cy="810" r="26" fill="#111"/><rect x="392" y="840" width="56" height="120" rx="20" fill="#111"/><circle cx="520" cy="828" r="21" fill="#111"/><rect x="498" y="852" width="45" height="96" rx="20" fill="#111"/><circle cx="1120" cy="819" r="23" fill="#111"/><rect x="1095" y="846" width="50" height="108" rx="20" fill="#111"/><circle cx="1240" cy="801" r="29" fill="#111"/><rect x="1209" y="834" width="62" height="132" rx="20" fill="#111"/><circle cx="980" cy="837" r="18" fill="#111"/><rect x="960" y="858" width="39" height="84" rx="20" fill="#111"/></svg>

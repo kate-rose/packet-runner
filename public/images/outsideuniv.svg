@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <pattern id="ht" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+    <rect width="14" height="14" fill="#dcdcdc"/><circle cx="7" cy="7" r="3.1" fill="#111"/>
+  </pattern>
+  <pattern id="htd" width="12" height="12" patternUnits="userSpaceOnUse">
+    <rect width="12" height="12" fill="#9a9a9a"/><circle cx="6" cy="6" r="4.2" fill="#0c0c0c"/>
+  </pattern>
+  <pattern id="htl" width="16" height="16" patternUnits="userSpaceOnUse">
+    <rect width="16" height="16" fill="#f2f2f2"/><circle cx="8" cy="8" r="2.0" fill="#222"/>
+  </pattern>
+  <pattern id="bricks" width="80" height="44" patternUnits="userSpaceOnUse">
+    <rect width="80" height="44" fill="#1a1a1a"/>
+    <rect width="80" height="44" fill="none" stroke="#555" stroke-width="2"/>
+    <line x1="40" y1="0" x2="40" y2="22" stroke="#555" stroke-width="2"/>
+    <line x1="0" y1="22" x2="80" y2="22" stroke="#555" stroke-width="2"/>
+    <line x1="0" y1="44" x2="80" y2="44" stroke="#555" stroke-width="2"/>
+  </pattern>
+  <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+    <stop offset="55%" stop-color="#cfcfcf" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="#fff"/><rect width="1600" height="640" fill="url(#htl)"/><rect x="300" y="180" width="1000" height="600" fill="url(#ht)" stroke="#111" stroke-width="6"/><polygon points="280,200 800,70 1320,200" fill="#fff" stroke="#111" stroke-width="6"/><rect x="380" y="240" width="46" height="430" fill="#fff" stroke="#111" stroke-width="4"/><line x1="392" y1="240" x2="392" y2="670" stroke="#999" stroke-width="3"/><line x1="410" y1="240" x2="410" y2="670" stroke="#999" stroke-width="3"/><rect x="500" y="240" width="46" height="430" fill="#fff" stroke="#111" stroke-width="4"/><line x1="512" y1="240" x2="512" y2="670" stroke="#999" stroke-width="3"/><line x1="530" y1="240" x2="530" y2="670" stroke="#999" stroke-width="3"/><rect x="620" y="240" width="46" height="430" fill="#fff" stroke="#111" stroke-width="4"/><line x1="632" y1="240" x2="632" y2="670" stroke="#999" stroke-width="3"/><line x1="650" y1="240" x2="650" y2="670" stroke="#999" stroke-width="3"/><rect x="740" y="240" width="46" height="430" fill="#fff" stroke="#111" stroke-width="4"/><line x1="752" y1="240" x2="752" y2="670" stroke="#999" stroke-width="3"/><line x1="770" y1="240" x2="770" y2="670" stroke="#999" stroke-width="3"/><rect x="860" y="240" width="46" height="430" fill="#fff" stroke="#111" stroke-width="4"/><line x1="872" y1="240" x2="872" y2="670" stroke="#999" stroke-width="3"/><line x1="890" y1="240" x2="890" y2="670" stroke="#999" stroke-width="3"/><rect x="980" y="240" width="46" height="430" fill="#fff" stroke="#111" stroke-width="4"/><line x1="992" y1="240" x2="992" y2="670" stroke="#999" stroke-width="3"/><line x1="1010" y1="240" x2="1010" y2="670" stroke="#999" stroke-width="3"/><rect x="1100" y="240" width="46" height="430" fill="#fff" stroke="#111" stroke-width="4"/><line x1="1112" y1="240" x2="1112" y2="670" stroke="#999" stroke-width="3"/><line x1="1130" y1="240" x2="1130" y2="670" stroke="#999" stroke-width="3"/><rect x="1220" y="240" width="46" height="430" fill="#fff" stroke="#111" stroke-width="4"/><line x1="1232" y1="240" x2="1232" y2="670" stroke="#999" stroke-width="3"/><line x1="1250" y1="240" x2="1250" y2="670" stroke="#999" stroke-width="3"/><rect x="300" y="700" width="1000" height="16" fill="#fff" stroke="#111" stroke-width="3"/><rect x="278" y="716" width="1044" height="16" fill="#fff" stroke="#111" stroke-width="3"/><rect x="256" y="732" width="1088" height="16" fill="#fff" stroke="#111" stroke-width="3"/><rect x="234" y="748" width="1132" height="16" fill="#fff" stroke="#111" stroke-width="3"/><rect x="212" y="764" width="1176" height="16" fill="#fff" stroke="#111" stroke-width="3"/><rect x="190" y="780" width="1220" height="16" fill="#fff" stroke="#111" stroke-width="3"/><rect x="760" y="120" width="80" height="80" fill="#111"/><circle cx="800" cy="160" r="30" fill="#fff" stroke="#111" stroke-width="4"/><line x1="800" y1="160" x2="800" y2="140" stroke="#111" stroke-width="3"/><line x1="800" y1="160" x2="816" y2="166" stroke="#111" stroke-width="3"/></svg>

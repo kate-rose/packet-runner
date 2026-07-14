@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd27f" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffd27f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gt" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#79e0c8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#79e0c8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- base track -->
+  <line x1="180" y1="300" x2="1420" y2="300" stroke="#3a2f1a" stroke-width="6"/>
+
+  <!-- animated hop segments (dim behind, bright ahead) -->
+  <line x1="180" y1="300" x2="480" y2="300" stroke="#ffd27f" stroke-width="7">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1"
+      values="1;1;0.15;0.15;0.15;0.15;0.15;0.15;1"/>
+  </line>
+  <line x1="480" y1="300" x2="800" y2="300" stroke="#ffd27f" stroke-width="7">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1"
+      values="0.15;0.15;1;1;0.15;0.15;0.15;0.15;0.15"/>
+  </line>
+  <line x1="800" y1="300" x2="1120" y2="300" stroke="#ffd27f" stroke-width="7">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1"
+      values="0.15;0.15;0.15;0.15;1;1;0.15;0.15;0.15"/>
+  </line>
+  <line x1="1120" y1="300" x2="1420" y2="300" stroke="#79e0c8" stroke-width="7">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1"
+      values="0.15;0.15;0.15;0.15;0.15;0.15;1;1;0.15"/>
+  </line>
+
+  <!-- node glows (pulse as the packet arrives) -->
+  <circle cx="480" cy="300" r="70" fill="url(#g)">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1" values="0;1;1;0;0;0;0;0;0"/>
+  </circle>
+  <circle cx="800" cy="300" r="70" fill="url(#g)">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1" values="0;0;0;1;1;0;0;0;0"/>
+  </circle>
+  <circle cx="1120" cy="300" r="70" fill="url(#g)">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1" values="0;0;0;0;0;1;1;0;0"/>
+  </circle>
+  <circle cx="1420" cy="300" r="60" fill="url(#gt)">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1" values="0;0;0;0;0;0;0;1;1"/>
+  </circle>
+
+  <!-- YOU origin (dims once you've left, your starting point is forgotten) -->
+  <g>
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;1" values="1;0.3;0.3;1"/>
+    <rect x="140" y="260" width="80" height="80" rx="8" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="5"/>
+    <text x="180" y="308" font-family="monospace" font-size="26" fill="#f4f4f4" text-anchor="middle">YOU</text>
+  </g>
+
+  <!-- onion-ring nodes -->
+  <g font-family="monospace" text-anchor="middle">
+    <g>
+      <circle cx="480" cy="300" r="44" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="4"/>
+      <circle cx="480" cy="300" r="28" fill="none" stroke="#888" stroke-width="3"/>
+      <circle cx="480" cy="300" r="14" fill="none" stroke="#888" stroke-width="3"/>
+      <text x="480" y="218" font-size="22" fill="#f4f4f4">ENTRY</text>
+      <text x="480" y="406" font-size="17" fill="#ffd27f">knows you</text>
+    </g>
+    <g>
+      <circle cx="800" cy="300" r="44" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="4"/>
+      <circle cx="800" cy="300" r="28" fill="none" stroke="#888" stroke-width="3"/>
+      <circle cx="800" cy="300" r="14" fill="none" stroke="#888" stroke-width="3"/>
+      <text x="800" y="218" font-size="22" fill="#f4f4f4">MIDDLE</text>
+      <text x="800" y="406" font-size="17" fill="#5a5a5a">knows neither</text>
+    </g>
+    <g>
+      <circle cx="1120" cy="300" r="44" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="4"/>
+      <circle cx="1120" cy="300" r="28" fill="none" stroke="#888" stroke-width="3"/>
+      <circle cx="1120" cy="300" r="14" fill="none" stroke="#888" stroke-width="3"/>
+      <text x="1120" y="218" font-size="22" fill="#f4f4f4">EXIT</text>
+      <text x="1120" y="406" font-size="17" fill="#79e0c8">knows the goal</text>
+    </g>
+    <g>
+      <circle cx="1420" cy="300" r="30" fill="#0b0b0b" stroke="#79e0c8" stroke-width="5"/>
+      <circle cx="1420" cy="300" r="12" fill="#79e0c8">
+        <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+          keyTimes="0;0.95;1" values="0.25;0.25;1"/>
+      </circle>
+      <text x="1420" y="218" font-size="22" fill="#79e0c8">DROP</text>
+    </g>
+  </g>
+
+  <!-- the travelling packet -->
+  <circle cy="300" r="22" fill="url(#g)">
+    <animate attributeName="cx" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1"
+      values="180;480;480;800;800;1120;1120;1420;1420"/>
+  </circle>
+  <circle cy="300" r="9" fill="#fff">
+    <animate attributeName="cx" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.18;0.25;0.45;0.52;0.72;0.80;0.95;1"
+      values="180;480;480;800;800;1120;1120;1420;1420"/>
+  </circle>
+
+  <text x="800" y="600" font-family="monospace" font-size="28" fill="#f4f4f4" text-anchor="middle">No single node knows the whole route.</text>
+  <text x="800" y="644" font-family="monospace" font-size="20" fill="#c79a52" text-anchor="middle">Stop any one of them, and your story stays in pieces.</text>
+</svg>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packet Runner</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="game">
+        <div id="stage">
+          <div id="bg"></div>
+          <div id="sprites"></div>
+          <div id="overlay"></div>
+          <div id="bg-label"></div>
+        </div>
+
+        <button id="ledger-btn" title="Open your tile (who knows what)">
+          <span class="tile-glyph">▦</span>
+          <span class="tile-text">TILE</span>
+        </button>
+
+        <button id="audio-btn" title="Toggle sound">
+          <span class="audio-glyph">♪</span>
+          <span class="audio-text">SOUND</span>
+        </button>
+
+        <div id="textbox" class="hidden">
+          <div id="speaker"></div>
+          <div id="dialogue"></div>
+          <div id="continue-hint">▸</div>
+        </div>
+
+        <div id="menu" class="hidden"></div>
+
+        <div id="widget" class="hidden"></div>
+
+        <div id="ledger-screen" class="hidden"></div>
+        <div id="toast"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

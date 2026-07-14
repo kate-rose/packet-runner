@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="ht" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#161616"/><circle cx="7" cy="7" r="2.4" fill="#000"/></pattern>
+    <radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffd27f" stop-opacity="0.5"/><stop offset="100%" stop-color="#ffd27f" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#0b0b0b"/>
+  <rect width="1600" height="1000" fill="url(#ht)" opacity="0.5"/>
+  <text x="800" y="120" font-family="monospace" font-size="40" letter-spacing="12" fill="#ffd27f" text-anchor="middle">THE ONION ROUTE</text>
+  <text x="800" y="160" font-family="monospace" font-size="20" fill="#c79a52" text-anchor="middle">each node knows only its neighbours</text>
+
+  <!-- track -->
+  <line x1="180" y1="460" x2="1420" y2="460" stroke="#4a3a1f" stroke-width="6"/>
+  <!-- active hop segments in amber -->
+  <line x1="180" y1="460" x2="480" y2="460" stroke="#ffd27f" stroke-width="6"/>
+  <line x1="480" y1="460" x2="800" y2="460" stroke="#79e0c8" stroke-width="6" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <line x1="800" y1="460" x2="1120" y2="460" stroke="#79e0c8" stroke-width="6" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <line x1="1120" y1="460" x2="1420" y2="460" stroke="#ffd27f" stroke-width="6"/>
+
+  <!-- YOU -->
+  <g>
+    <rect x="140" y="420" width="80" height="80" rx="8" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="5"/>
+    <text x="180" y="468" font-family="monospace" font-size="26" fill="#f4f4f4" text-anchor="middle">YOU</text>
+    <text x="180" y="560" font-family="monospace" font-size="18" fill="#c79a52" text-anchor="middle">origin</text>
+  </g>
+
+  <!-- ENTRY -->
+  <g>
+    <circle cx="480" cy="460" r="60" fill="url(#g)"/>
+    <circle cx="480" cy="460" r="46" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="4"/>
+    <circle cx="480" cy="460" r="30" fill="none" stroke="#888" stroke-width="3"/>
+    <circle cx="480" cy="460" r="15" fill="none" stroke="#888" stroke-width="3"/>
+    <text x="480" y="370" font-family="monospace" font-size="22" fill="#f4f4f4" text-anchor="middle">ENTRY</text>
+    <!-- knowledge card -->
+    <text x="480" y="580" font-family="monospace" font-size="17" fill="#ffd27f" text-anchor="middle">● knows you</text>
+    <text x="480" y="606" font-family="monospace" font-size="17" fill="#5a5a5a" text-anchor="middle">○ not the goal</text>
+  </g>
+
+  <!-- MIDDLE -->
+  <g>
+    <circle cx="800" cy="460" r="46" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="4"/>
+    <circle cx="800" cy="460" r="30" fill="none" stroke="#888" stroke-width="3"/>
+    <circle cx="800" cy="460" r="15" fill="none" stroke="#888" stroke-width="3"/>
+    <text x="800" y="370" font-family="monospace" font-size="22" fill="#f4f4f4" text-anchor="middle">MIDDLE</text>
+    <text x="800" y="580" font-family="monospace" font-size="17" fill="#5a5a5a" text-anchor="middle">○ not you</text>
+    <text x="800" y="606" font-family="monospace" font-size="17" fill="#5a5a5a" text-anchor="middle">○ not the goal</text>
+  </g>
+
+  <!-- EXIT -->
+  <g>
+    <circle cx="1120" cy="460" r="60" fill="url(#g)"/>
+    <circle cx="1120" cy="460" r="46" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="4"/>
+    <circle cx="1120" cy="460" r="30" fill="none" stroke="#888" stroke-width="3"/>
+    <circle cx="1120" cy="460" r="15" fill="none" stroke="#888" stroke-width="3"/>
+    <text x="1120" y="370" font-family="monospace" font-size="22" fill="#f4f4f4" text-anchor="middle">EXIT</text>
+    <text x="1120" y="580" font-family="monospace" font-size="17" fill="#5a5a5a" text-anchor="middle">○ not you</text>
+    <text x="1120" y="606" font-family="monospace" font-size="17" fill="#ffd27f" text-anchor="middle">● knows the goal</text>
+  </g>
+
+  <!-- DROP -->
+  <g>
+    <circle cx="1420" cy="460" r="34" fill="#0b0b0b" stroke="#79e0c8" stroke-width="5"/>
+    <circle cx="1420" cy="460" r="14" fill="#79e0c8"/>
+    <text x="1420" y="370" font-family="monospace" font-size="22" fill="#79e0c8" text-anchor="middle">DROP</text>
+    <text x="1420" y="560" font-family="monospace" font-size="18" fill="#c79a52" text-anchor="middle">goal</text>
+  </g>
+
+  <text x="800" y="800" font-family="monospace" font-size="26" fill="#f4f4f4" text-anchor="middle">No one node has the whole route.</text>
+  <text x="800" y="838" font-family="monospace" font-size="20" fill="#c79a52" text-anchor="middle">Stop any single node, and your story stays in pieces.</text>
+</svg>
