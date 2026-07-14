@@ -2,6 +2,12 @@
 
 A privacy-education visual novel by **Kate Bertash**. Part 1.
 
+**▶ Play the current build: https://kate-rose.github.io/packet-runner/**
+
+This is a work-in-progress playtest build. Several scene backgrounds are still
+comic-style placeholders while the real art is finished. Every push to `main`
+auto-rebuilds and redeploys the site via GitHub Actions.
+
 This is a from-scratch, Ren'Py-free rebuild: a small data-driven VN engine in
 vanilla TypeScript + Vite. The full Part 1 script is ported in, and the old
 hidden `trace_meter` score is replaced by the **"Who Knows What" ledger** — a
