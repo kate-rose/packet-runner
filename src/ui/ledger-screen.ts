@@ -59,11 +59,11 @@ export function renderLedger(root: HTMLElement, state: GameState, onClose: () =>
         </tbody>
       </table>
       <div class="ledger-legend">
-        <span><b>${CELL_GLYPH.seen}</b> seen</span>
-        <span><b>${CELL_GLYPH.logged}</b> logged</span>
-        <span><b>${CELL_GLYPH.warrant}</b> warrant-only</span>
-        <span><b>${CELL_GLYPH.split}</b> fragment</span>
-        <span><b>${CELL_GLYPH.unknown}</b> unknown</span>
+        <span><b class="state-seen">${CELL_GLYPH.seen}</b> seen</span>
+        <span><b class="state-logged">${CELL_GLYPH.logged}</b> logged</span>
+        <span><b class="state-warrant">${CELL_GLYPH.warrant}</b> warrant-only</span>
+        <span><b class="state-split">${CELL_GLYPH.split}</b> fragment</span>
+        <span><b class="state-unknown">${CELL_GLYPH.unknown}</b> unknown</span>
       </div>
       <div class="ledger-verdict ${exposed ? "bad" : "good"}">
         ${

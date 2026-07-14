@@ -403,7 +403,12 @@ html, body {
 .cell.state-warrant { color: var(--ok); text-shadow: 0 0 8px rgba(121, 224, 200, 0.5); }
 .cell.state-split { color: #7fd4ff; text-shadow: 0 0 8px rgba(127, 212, 255, 0.5); }
 .ledger-legend { display: flex; gap: 16px; flex-wrap: wrap; margin: 14px 0; font-size: 11px; color: var(--amber-dim); }
-.ledger-legend b { color: var(--amber); font-size: 1.2em; }
+.ledger-legend b { font-size: 1.2em; }
+.ledger-legend b.state-seen { color: #ffd27f; }
+.ledger-legend b.state-logged { color: var(--danger); }
+.ledger-legend b.state-warrant { color: var(--ok); }
+.ledger-legend b.state-split { color: #7fd4ff; }
+.ledger-legend b.state-unknown { color: #6b5a3a; }
 .ledger-verdict { padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.4; }
 .ledger-verdict.good { border: 1px solid var(--ok); color: var(--ok); background: rgba(121, 224, 200, 0.06); }
 .ledger-verdict.bad { border: 1px solid var(--danger); color: var(--danger); background: rgba(255, 138, 122, 0.06); }
